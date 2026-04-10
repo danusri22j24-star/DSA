@@ -1,0 +1,11 @@
+class Solution {
+    public static int countDigits(int n) {
+        // Code here
+        int value=0;
+        while(n>0){
+            value=value+1;
+            n=n/10;
+        }
+        return value;
+    }
+}

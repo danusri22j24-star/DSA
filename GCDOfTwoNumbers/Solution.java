@@ -1,0 +1,14 @@
+class Solution {
+    public static int gcd(int a, int b) {
+        // code here
+        int add=a+b;
+        int value=1;
+        for(int i=1;i<add;i++){
+            if(a%i==0 && b%i==0){
+                value=i;
+            }
+        }
+        return value;
+
+    }
+}
