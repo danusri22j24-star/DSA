@@ -1,18 +1,15 @@
 class Solution {
     public void bubbleSort(int[] arr) {
         // code here
-        int mini=0;
         int temp=0;
         for(int i=0;i<arr.length-1;i++){
-            mini=i;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[j]<arr[mini]){
-                    mini=j;
+            for(int j=0;j<arr.length-i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
                 }
             }
-            temp=arr[mini];
-            arr[mini]=arr[i];
-            arr[i]=temp;
         }
     }
 }
